@@ -8,6 +8,6 @@ export const SearchCont = styled.div`
   height: 20%;
   width: 100%;
 
-  background: ${(props) => (props.theme === true ? "black" : "white")};
-  color: ${(props) => (props.theme === true ? "whitesmoke" : "black")};
+  background: ${(props) => (props.theme === true ? "#010409" : "#c9d1d9")};
+  color: ${(props) => (props.theme === true ? "whitesmoke" : "#010409")};
 `;

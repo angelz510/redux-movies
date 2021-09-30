@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { SearchBtn } from "../fragments/SearchBtn";
 
 const SearchButton = () => {
-  return <SearchBtn>Search</SearchBtn>;
+  const theme = useSelector((state) => state.theme);
+
+  return <SearchBtn theme={theme}>Search</SearchBtn>;
 };
 
 export default SearchButton;

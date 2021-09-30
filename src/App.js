@@ -2,8 +2,11 @@ import React from "react";
 import { AppCont } from "./fragments/AppCont";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme } from "./actions";
+//components
 import SearchContainer from "./components/SearchContainer";
-import { SearchBtn } from "./fragments/SearchBtn";
+import Nav from "./components/Nav";
+//fragments
+import { ThemeBtn } from "./fragments/ThemeBtn";
 import { Header } from "./fragments/Header";
 
 function App() {
@@ -12,11 +15,12 @@ function App() {
 
   return (
     <AppCont theme={theme}>
-      <SearchBtn onClick={() => dispatch(toggleTheme(!theme))}>
+      <Nav />
+      <ThemeBtn theme={theme} onClick={() => dispatch(toggleTheme(!theme))}>
         {theme ? "Light" : "Dark"} Mode
-      </SearchBtn>
+      </ThemeBtn>
       <Header theme={theme}>Movie DB</Header>
-      <SearchContainer theme={theme} />
+      <SearchContainer />
     </AppCont>
   );
 }

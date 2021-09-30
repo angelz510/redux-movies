@@ -5,9 +5,9 @@ export const SearchInp = styled.input`
   width: 40%;
   outline: none;
   border: none;
-  border-bottom: ${(props) => (props.theme === true ? "2px solid white" : "2px solid black")};
+  border-bottom: ${(props) => (props.theme === true ? "2px solid #c9d1d9" : "2px solid #010409")};
   font-size: 25px;
 
-  background: ${(props) => (props.theme === true ? "black" : "white")};
-  color: ${(props) => (props.theme === true ? "whitesmoke" : "black")};
+  background: ${(props) => (props.theme === true ? "#010409" : "#c9d1d9")};
+  color: ${(props) => (props.theme === true ? "#c9d1d9" : "#010409")};
 `;

@@ -4,6 +4,7 @@ import { toggleTheme } from "./actions";
 //components
 import SearchContainer from "./components/SearchContainer";
 import Nav from "./components/Nav";
+import MoviesContainer from "./components/MoviesContainer";
 //fragments
 import { ThemeBtn } from "./fragments/ThemeBtn";
 import { Header } from "./fragments/Header";
@@ -11,6 +12,7 @@ import { AppCont } from "./fragments/AppCont";
 
 function App() {
   const theme = useSelector((state) => state.theme);
+  const movies = useSelector((state) => state.movies);
   const dispatch = useDispatch();
 
   return (
@@ -21,6 +23,12 @@ function App() {
       </ThemeBtn>
       <Header theme={theme}>Movie DB</Header>
       <SearchContainer />
+      <MoviesContainer>
+        {console.log(movies)}
+        {movies.map((movie, index) => (
+          <div key={index}>{movie.title}</div>
+        ))}
+      </MoviesContainer>
     </AppCont>
   );
 }

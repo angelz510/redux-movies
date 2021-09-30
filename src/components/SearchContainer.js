@@ -23,7 +23,7 @@ const SearchContainer = () => {
   return (
     <SearchCont theme={theme}>
       <SearchInput onChange={(e) => dispatch(searchChange(e))} />
-      <SearchButton onClick={(e) => dispatch(onSubmit(e, search))} />
+      <SearchButton onClick={(e) => onSubmit(e, search)} />
     </SearchCont>
   );
 };

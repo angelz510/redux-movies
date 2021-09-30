@@ -1,5 +1,4 @@
 import React from "react";
-import { AppCont } from "./fragments/AppCont";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme } from "./actions";
 //components
@@ -8,6 +7,7 @@ import Nav from "./components/Nav";
 //fragments
 import { ThemeBtn } from "./fragments/ThemeBtn";
 import { Header } from "./fragments/Header";
+import { AppCont } from "./fragments/AppCont";
 
 function App() {
   const theme = useSelector((state) => state.theme);

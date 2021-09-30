@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 
 const NavContainer = styled.div`
-  background: ${(props) => (props.theme === true ? "#010409" : "#c9d1d9")};
+  background: ${(props) => (props.theme === true ? "#161b22" : "#161b22")};
   height: 10vh;
   width: 100%;
   display: flex;
@@ -14,7 +14,7 @@ const NavContainer = styled.div`
 `;
 
 const NavText = styled.div`
-  color: ${(props) => (props.theme === true ? "#c9d1d9" : "black")};
+  color: ${(props) => (props.theme === true ? "whitesmoke" : "whitesmoke")};
   font-size: 1.5rem;
   font-weight: bolder;
   cursor: pointer;

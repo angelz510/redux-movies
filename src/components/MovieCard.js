@@ -8,20 +8,30 @@ const Card = styled.div`
   align-items: center;
   flex-direction: column;
   height: 100%;
-  width: 50%;
-
-  background: ${(props) => (props.theme === true ? "#010409" : "#c9d1d9")};
+  width: 20%;
+  background: ${(props) => (props.theme === true ? "#141414" : "white")};
+  box-shadow: 0 3px 10px 0 ${(props) => (props.theme === true ? "black" : "#aaa")};
+  border-radius: 3px;
+  margin: 1rem;
 `;
 
-const Title = styled.h2`
+const Title = styled.h3`
+  text-align: center;
   margin: 0;
   color: ${(props) => (props.theme === true ? "whitesmoke" : "#010409")};
 `;
 
-const Img = styled.img``;
+const Img = styled.img`
+  object-fit: cover;
+  margin: 1rem;
+`;
 
 const Year = styled.h4`
   margin: 0;
+`;
+
+const Plot = styled.div`
+  color: ${(props) => (props.theme === true ? "whitesmoke" : "#010409")};
 `;
 
 const MovieCard = (props) => {
@@ -30,9 +40,10 @@ const MovieCard = (props) => {
   return (
     <>
       <Card theme={theme}>
-        <Title theme={theme}>{props.title}</Title>
         <Img src={props.img} />
+        <Title theme={theme}>{props.title}</Title>
         <Year theme={theme}>{props.year}</Year>
+        <Plot theme={theme}>{props.plot}</Plot>
       </Card>
       <br />
     </>

@@ -3,7 +3,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const fetchMovieSearch = async (search) => {
   try {
-    const res = await axios.get(`http://www.omdbapi.com/?S=${search}&apikey=${API_KEY}`);
+    const res = await axios.get(`http://www.omdbapi.com/?s=${search}&plot&apikey=${API_KEY}`);
     console.log(res.data.Search);
     return res.data.Search;
   } catch (err) {

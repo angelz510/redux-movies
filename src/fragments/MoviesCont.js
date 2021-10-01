@@ -2,9 +2,15 @@ import styled from "styled-components";
 
 export const MoviesCont = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  flex-direction: column;
-  background: ${(props) => (props.theme === true ? "#010409" : "#c9d1d9")};
+  flex-flow: row nowrap;
+  padding-top: 3rem;
+  overflow-x: auto;
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  background: ${(props) => (props.theme === true ? "#141414" : "white")};
   color: ${(props) => (props.theme === true ? "whitesmoke" : "#010409")};
 `;

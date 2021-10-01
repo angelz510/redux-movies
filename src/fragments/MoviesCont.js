@@ -6,6 +6,7 @@ export const MoviesCont = styled.div`
   align-items: center;
   flex-flow: row nowrap;
   padding-top: 3rem;
+  padding-bottom: 3rem;
   overflow-x: auto;
   ::-webkit-scrollbar {
     width: 10px;

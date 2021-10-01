@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SearchBox = styled.div`
+export const SearchBox = styled.form`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

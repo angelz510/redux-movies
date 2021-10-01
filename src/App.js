@@ -9,6 +9,7 @@ import MoviesContainer from "./components/MoviesContainer";
 import { ThemeBtn } from "./fragments/ThemeBtn";
 import { Header } from "./fragments/Header";
 import { AppCont } from "./fragments/AppCont";
+import MovieCard from "./components/MovieCard";
 
 function App() {
   const theme = useSelector((state) => state.theme);
@@ -24,9 +25,13 @@ function App() {
       <Header theme={theme}>Movie DB</Header>
       <SearchContainer />
       <MoviesContainer>
-        {console.log(movies)}
         {movies.map((movie, index) => (
-          <div key={index}>{movie.title}</div>
+          <MovieCard
+            key={index}
+            img={movie.Poster}
+            title={movie.Title}
+            year={movie.Year}
+          ></MovieCard>
         ))}
       </MoviesContainer>
     </AppCont>

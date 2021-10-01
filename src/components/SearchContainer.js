@@ -34,7 +34,7 @@ const SearchContainer = () => {
         </ThemeBtn>
       </div>
       <SearchBox theme={theme}>
-        <SearchInput onChange={(e) => dispatch(searchChange(e))} />
+        <SearchInput type="submit" onChange={(e) => dispatch(searchChange(e))} />
         <SearchButton onClick={(e) => onSubmit(e, search)} />
       </SearchBox>
     </SearchCont>

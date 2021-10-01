@@ -13,21 +13,27 @@ const Card = styled.div`
   box-shadow: 0 3px 10px 0 ${(props) => (props.theme === true ? "black" : "#aaa")};
   border-radius: 3px;
   margin: 1rem;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 const Title = styled.h3`
   text-align: center;
-  margin: 0;
+  margin: 0rem;
   color: ${(props) => (props.theme === true ? "whitesmoke" : "#010409")};
 `;
 
 const Img = styled.img`
   object-fit: cover;
-  margin: 1rem;
+  margin: 0.5rem;
 `;
 
 const Year = styled.h4`
-  margin: 0;
+  margin-bottom: 0.5rem;
 `;
 
 const Plot = styled.div`
